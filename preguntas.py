@@ -20,8 +20,8 @@ def pregunta_01():
     )
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
-    y = df["life"].array
-    X = df["fertility"].array
+    y = df["life"].values
+    X = df["fertility"].values
 
     # Imprima las dimensiones de `y`
     print(y.shape)
@@ -81,10 +81,10 @@ def pregunta_03():
     )
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df["fertility"].array
+    X_fertility = df["fertility"].values
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df["life"].array
+    y_life = df["life"].values
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
