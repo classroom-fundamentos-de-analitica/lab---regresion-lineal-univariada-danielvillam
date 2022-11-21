@@ -30,10 +30,10 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.reshape(len(y), 1)
+    y_reshaped = y.reshape(-1, 1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = X.reshape(len(X), 1)
+    X_reshaped = X.reshape(-1, 1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
@@ -81,10 +81,10 @@ def pregunta_03():
     )
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df["fertility"].values
+    X_fertility = df["fertility"]
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df["life"].values
+    y_life = df["life"]
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
@@ -97,7 +97,7 @@ def pregunta_03():
     prediction_space = np.linspace(
         X_fertility.min(),
         X_fertility.max(),
-    ).reshape(len(X_fertility), 1)
+    ).reshape(-1, 1)
 
     # Entrene el modelo usando X_fertility y y_life
     reg.fit(X_fertility, y_life)
