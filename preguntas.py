@@ -16,7 +16,7 @@ def pregunta_01():
     """
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
+        "gm_2008_region.csv",
     )
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
@@ -50,7 +50,7 @@ def pregunta_02():
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
+        "gm_2008_region.csv",
     )
 
     # Imprima las dimensiones del DataFrame
@@ -77,7 +77,7 @@ def pregunta_03():
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
+        "gm_2008_region.csv",
     )
 
     # Asigne a la variable los valores de la columna `fertility`
