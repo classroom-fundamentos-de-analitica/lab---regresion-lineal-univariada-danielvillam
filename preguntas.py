@@ -16,7 +16,7 @@ def pregunta_01():
     """
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "gm_2008_region.csv",
+        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
     )
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
@@ -30,10 +30,10 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.reshape(len(y), -1)
+    y_reshaped = y.reshape(len(y), 1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = X.reshape(len(X), -1)
+    X_reshaped = X.reshape(len(X), 1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
@@ -50,7 +50,7 @@ def pregunta_02():
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "gm_2008_region.csv",
+        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
     )
 
     # Imprima las dimensiones del DataFrame
@@ -77,7 +77,7 @@ def pregunta_03():
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv(
-        "gm_2008_region.csv",
+        "C:\\Users\\danii\Documents\\GitHub\\lab---regresion-lineal-univariada-danielvillam\\gm_2008_region.csv",
     )
 
     # Asigne a la variable los valores de la columna `fertility`
@@ -97,7 +97,7 @@ def pregunta_03():
     prediction_space = np.linspace(
         X_fertility.min(),
         X_fertility.max(),
-    ).reshape(len(X_fertility), -1)
+    ).reshape(len(X_fertility), 1)
 
     # Entrene el modelo usando X_fertility y y_life
     reg.fit(X_fertility, y_life)
@@ -151,6 +151,3 @@ def pregunta_04():
     print("R^2: {:6.4f}".format(linearRegression.score(X_test, y_test)))
     rmse = np.sqrt(____(____, ____))
     print("Root Mean Squared Error: {:6.4f}".format(rmse))
-
-if __name__ == "__main__":
-    print(pregunta_03())
